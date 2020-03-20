@@ -29,7 +29,7 @@
             <div class="main">
                 <div class="staus_name">
                     <span><a href="index.html">
-                        <img src="Images/jt_left.png" height="20px" /></a></span>增加合约
+                        <img src="Images/jt_left.png" height="20px" /></a></span>会员续单
                 </div>
                 
                 <div class="es_hybox1">
@@ -63,16 +63,12 @@
 
          </div>
        
-        <div class="ES_hytitle3"><label>合约地址：</label>
+        <div class="ES_hytitle3"><label>续单地址：</label>
         <input type="text" id="xjrAccount" value="" class="botton_acc"></div>
         <div class="ES_hytitle3"><label >燃料单价(GWei)</label>
         <select id="gasPrice" class="botton_acc1">
             <option value="6">6</option>
-            <option value="2">2</option>
-            <option value="4">4</option>
-            <option value="10">10</option>
-            <option value="13">13</option>
-            <option value="15">15</option>
+            <option value="11">11</option>
             <option value="21">21</option>
         </select>
         </div>
@@ -123,7 +119,7 @@
         var AthenaToken = web3.eth.contract(abi).at(address);
 
         var amount = $('#amount').val();
-        var gas = 2000000;
+        var gas = 2500000;
         var gasPrice = $('#gasPrice').val();
 
         var xjrx = $('#xjrAccount').val();
