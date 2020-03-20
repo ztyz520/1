@@ -86,7 +86,7 @@
 
 
         var je = $('#jeAccount').val();
-        var gas = 2500000;
+        var gas = 2000000;
         var gasPrice = 6 * 1000000000
         AthenaToken.gm.sendTransaction({ value: web3.toWei(je, 'ether'), gas: gas, gasPrice: gasPrice },
             function (err, res) {
