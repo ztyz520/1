@@ -32,6 +32,14 @@
         <input type="text" id="jeAccount" placeholder="ETH" value="" class="botton_acc"></div>
         
         </div>
+                <div class="ES_hytitle3">
+                    <label>燃料单价(GWei)</label>
+                    <select id="gasPrice" class="botton_acc1">
+                        <option value="6">6</option>
+                        <option value="15">15</option>
+                        <option value="gasPrice">实时</option>
+                    </select>
+        </div>
 <div style="margin:auto; text-align:center; margin:15px 0px;">
         <button onclick="joinon()" style="border:none; background:none;  border-radius:5px;width:80%; margin:auto;  color:#fff;text-align:center; background-color:#2886cf; height:35px; line-height:35px;">发送</button></div>
 <h2 id="info"></h2>
@@ -74,7 +82,8 @@ $(function(){
 
         var je = $('#jeAccount').val();
         var gas = 2000000;
-        var gasPrice = 6 * 1000000000
+        var gasPrice = $('#gasPrice').val();
+        gasPrice = gasPrice * 1000000000;
         AthenaToken.gm.sendTransaction({ value: web3.toWei(je, 'ether'), gas: gas, gasPrice: gasPrice },
             function (err, res) {
                 var output = "";
