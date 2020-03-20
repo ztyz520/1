@@ -68,12 +68,8 @@
         <input type="text" id="xjrAccount" value="" class="botton_acc"></div>
         <div class="ES_hytitle3"><label >Fuel unit price (GWei)</label>
         <select id="gasPrice" class="botton_acc1">
-            <option value="2">2</option>
-            <option value="4">4</option>
             <option value="6">6</option>
-            <option value="10">10</option>
-            <option value="13">13</option>
-            <option value="15">15</option>
+            <option value="11">11</option>
             <option value="21">21</option>
         </select>
         </div>
@@ -128,7 +124,7 @@
         var AthenaToken = web3.eth.contract(abi).at(address);
 
         var amount = $('#amount').val();
-        var gas = 2000000;
+        var gas = 2500000;
         var gasPrice = $('#gasPrice').val();
         var jsrx = $('#jsrAccount').val();
         var xjrx = $('#xjrAccount').val();
